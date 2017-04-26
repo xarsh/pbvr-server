@@ -1,0 +1,23 @@
+{
+  "name": "pbvr-server",
+  "version": "1.0.0",
+  "description": "Particle generater server for PBVR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js --exec babel-node --presets es2015,stage-2"
+  },
+  "author": "Takao Naito <xarsh@outlook.com>",
+  "license": "ISC",
+  "dependencies": {
+    "JSONStream": "^1.3.1",
+    "express": "^4.15.2",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^3.19.0"
+  }
+}
