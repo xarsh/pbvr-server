@@ -12,10 +12,11 @@ app.use(compression()); // default compression level is decent enough
 
 app.get('/', (req, res) => res.send('PBVR server'));
 
-app.get('/lobster/:ensemble', (req, res) => { // TODO: replace with better way to read json
+app.get('/lobster/:ensemble', (req, res) => { // TODO: replace with better way to load volume
   fs.readFile('./data/lobster.json', 'utf-8', (err, data) => {
-    const d = pbvr.generateParticles(JSON.parse(data), req.params.ensemble);
-    res.json(d);
+    const volume = JSON.parse(data);
+    const ensemble = parseInt(req.params.ensemble);
+    res.json(pbvr.generateParticles(volume, ensemble));
   });
 });
 
