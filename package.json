@@ -8,9 +8,9 @@
     "dev": "nodemon index.js --exec babel-node --presets es2015,stage-2"
   },
   "author": "Takao Naito <xarsh@outlook.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "JSONStream": "^1.3.1",
+    "cors": "^2.8.3",
     "express": "^4.15.2",
     "lodash": "^4.17.4"
   },
